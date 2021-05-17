@@ -85,7 +85,7 @@ class Interface:
         elif len(models) > 1:
             raise ValueError('More than one model found with name %s' %name)
 
-        return Model(self.url, models[0], self.requests)   
+        return self.get_model_with_id(models[0]['id'])
 
     def get_model_with_id(self, id):
         """
