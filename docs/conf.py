@@ -17,7 +17,7 @@ sys.path.insert(0, os.path.abspath('../'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'Python Interface for MOS'
+project = 'Python Interface of MOS'
 copyright = '2021, James Merrick and Tomas Tinoco De Rubira'
 author = 'Fuinn'
 

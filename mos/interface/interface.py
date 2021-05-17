@@ -10,10 +10,10 @@ class Interface:
 
     Parameters
     ----------
-    url : REST API url (string). If not provided, is constructed from
+    url : REST API url (string). If not provided, it is constructed from
           env vars MOS_BACKEND_HOST and MOS_BACKEND_PORT
-    token : authorization token (string). If not provided, is is obtained 
-            from the "token" field env var MOS_BACKEND_TOKEN.
+    token : authorization token (string). If not provided, it is obtained 
+            from the env var MOS_BACKEND_TOKEN.
     """
 
     def __init__(self, url=None, token=None):
