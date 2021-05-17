@@ -1,1 +1,4 @@
-numpydoc
+numpydoc>=0.9.1
+numpy>=1.14.3
+scipy>=1.1.0
+requests>=2.22.0
