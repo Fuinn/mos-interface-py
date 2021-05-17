@@ -11,7 +11,7 @@ This section describes the Python API of MOS.
 Interface
 ---------
 
-.. autoclass:: mos.interface.Interface
+.. autoclass:: mos.interface.interface.Interface
    :members:
 
 .. _ref_model:
@@ -19,6 +19,6 @@ Interface
 Model
 -----
 
-.. autoclass:: mos.interface.Model
+.. autoclass:: mos.interface.model.Model
    :members:
    :exclude-members: __init__
