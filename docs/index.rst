@@ -7,7 +7,6 @@ This is the documentation for the Python interface of MOS, version |release|, la
 
 MOS is a universal *Mathematical Optimization Service* that facilitates the deployment, integration, management and analysis of mathematical optimization models.
 
-
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
