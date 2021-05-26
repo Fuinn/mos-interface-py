@@ -11,7 +11,6 @@ MOS is a universal *Mathematical Optimization Service* that facilitates the depl
    :maxdepth: 2
    :caption: Contents:
 
-   overview
    start
    reference 
 
