@@ -1,29 +1,25 @@
 .. _start:
 
-***************
 Getting Started
-***************
+===============
 
-^^^^^^^^^^^^^^^
 Installation
-^^^^^^^^^^^^^^^
+------------
 
-To install the MOS Interface:
+To install the Python MOS Interface use::
 
-``pip install setup.py``
+   pip install mos-interface
 
-^^^^^^^^^^^^^^^
 Authentication
-^^^^^^^^^^^^^^^
+--------------
+
 Authentication token.
 
-^^^^^^^^^^^^^^^
 Example
-^^^^^^^^^^^^^^^
+-------
 
+An example use of the MOS Python interface::
 
-An example use of the MOS Interface Package:
-::
    from mos.interface import Interface
 
    # Interface
@@ -52,4 +48,3 @@ An example use of the MOS Interface Package:
    # Function
    obj = model.get_function_state('objectivefn', 'value')
    assert(isinstance(obj, float))
-

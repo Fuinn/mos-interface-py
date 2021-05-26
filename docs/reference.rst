@@ -1,10 +1,9 @@
 .. _ref:
 
-*************
-Reference
-*************
+API Reference
+=============
 
-This section details the MOS Python Interface commands.
+This section details the MOS Python API.
 
 .. _ref_interface:
 
