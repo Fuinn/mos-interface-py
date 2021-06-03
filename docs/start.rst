@@ -15,9 +15,9 @@ Authentication
 
 An MOS account is required to obtain an authentication token. 
 
-The MOS authentication token may be obtained by logging in to the `MOS Frontend <https://mos.fuinn.ie>`_ and clicking the username in the top right corner.
+The MOS authentication token may be obtained by logging into the `MOS Frontend <https://mos.fuinn.ie>`_ and clicking the username in the top right corner.
 
-The token is passed through the ``Interface()`` function documented in the :ref:`ref`. The token may be explicitly passed through in the Python function, or as is implicit in the example below, set as an environment variable.
+When creating an :ref:`ref_interface` object, the token may be passed as an argument. Otherwise, it is assumed to be stored in an environment variable.
 
 
 Example
