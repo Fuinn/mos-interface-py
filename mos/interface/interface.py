@@ -28,9 +28,15 @@ class Interface:
 
         # URL
         if url is None:
-            url = 'http://{host}:{port}/api/'.format(
+            port = os.getenv('MOS_BACKEND_PORT')
+            if port == '443':
+                protocol = 'https'
+            else:
+                protocol = 'http'
+            url = '{protocol}://{host}:{port}/api/'.format(
+                protocol=protocol,
                 host=os.getenv('MOS_BACKEND_HOST'),
-                port=os.getenv('MOS_BACKEND_PORT')
+                port=port
             )
         if url[-1] != '/':
             url += '/'
