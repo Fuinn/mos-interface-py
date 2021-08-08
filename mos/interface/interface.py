@@ -16,7 +16,7 @@ class Interface:
             from the env var MOS_BACKEND_TOKEN.
     """
 
-    def __init__(self, url=None, token=None):
+    def __init__(self, url='https://mos.fuinn.ie:443/api/', token=None):
         """
         MOS interface class.
 
