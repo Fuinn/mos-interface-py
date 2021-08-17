@@ -16,7 +16,7 @@ class Interface:
             from the env var MOS_BACKEND_TOKEN.
     """
 
-    def __init__(self, url='https://mos.fuinn.ie:443/api/', token=None):
+    def __init__(self, url=None, token=None):
         """
         MOS interface class.
 
@@ -29,15 +29,19 @@ class Interface:
         # URL
         if url is None:
             port = os.getenv('MOS_BACKEND_PORT')
-            if port == '443':
+            if port == None:
+                url = 'https://mos.fuinn.ie:443/api/'                                
+            elif port == '443':
                 protocol = 'https'
             else:
                 protocol = 'http'
-            url = '{protocol}://{host}:{port}/api/'.format(
-                protocol=protocol,
-                host=os.getenv('MOS_BACKEND_HOST'),
-                port=port
-            )
+
+            if url is None:
+                url = '{protocol}://{host}:{port}/api/'.format(
+                    protocol=protocol,
+                    host=os.getenv('MOS_BACKEND_HOST'),
+                    port=port
+                )
         if url[-1] != '/':
             url += '/'
 
