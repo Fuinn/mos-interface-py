@@ -28,18 +28,18 @@ class Interface:
 
         # URL
         if url is None:
+            host = os.getenv('MOS_BACKEND_HOST')
             port = os.getenv('MOS_BACKEND_PORT')
-            if port == None:
+            if host is None or port is None:
                 url = 'https://mos.fuinn.ie:443/api/'                                
             elif port == '443':
                 protocol = 'https'
             else:
                 protocol = 'http'
-
             if url is None:
                 url = '{protocol}://{host}:{port}/api/'.format(
                     protocol=protocol,
-                    host=os.getenv('MOS_BACKEND_HOST'),
+                    host=host,
                     port=port
                 )
         if url[-1] != '/':
