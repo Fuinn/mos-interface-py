@@ -117,6 +117,29 @@ class Interface:
 
         return Model(self.url, r.json(), self.requests) 
 
+    def get_user_token(self, usr, pwd):
+        """
+        Gets user token.
+
+        Parameters
+        ----------
+        usr : user name (string)
+        owd : user password (string)
+
+        Returns
+        -------
+        token : user token (string)
+        """
+
+        url = urllib.parse.urljoin(self.url, 'authenticate/')
+
+        r = self.requests.post(url, data={
+            'username': usr,
+            'password': pwd
+        })
+        r.raise_for_status()
+        return r.json()['key']
+
     def new_model(self, filepath, quiet=True):
         """
         Creates new model from file.
@@ -146,4 +169,15 @@ class Interface:
             raise ValueError('unabel to create model')
 
         return Model(self.url, result['model'], self.requests)
+
+    def set_token(self, token):
+        """
+        Sets interface token.
+
+        Parameters
+        ----------
+        token : user token (string)
+        """
+
+        self.requests = Requests(token)
    
