@@ -28,20 +28,17 @@ class Interface:
 
         # URL
         if url is None:
-            host = os.getenv('MOS_BACKEND_HOST')
-            port = os.getenv('MOS_BACKEND_PORT')
-            if host is None or port is None:
-                url = 'https://mos.fuinn.ie:443/api/'                                
-            elif port == '443':
+            host = os.getenv('MOS_BACKEND_HOST', 'localhost')
+            port = os.getenv('MOS_BACKEND_PORT', '8000')
+            if port == '443':
                 protocol = 'https'
             else:
                 protocol = 'http'
-            if url is None:
-                url = '{protocol}://{host}:{port}/api/'.format(
-                    protocol=protocol,
-                    host=host,
-                    port=port
-                )
+            url = '{protocol}://{host}:{port}/api/'.format(
+                protocol=protocol,
+                host=host,
+                port=port
+            )
         if url[-1] != '/':
             url += '/'
 
