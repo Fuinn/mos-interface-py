@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>API Reference &#8212; Python Interface of MOS 0.1.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
@@ -12,6 +12,7 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -33,16 +34,16 @@
           <div class="body" role="main">
             
   <section id="api-reference">
-<span id="ref"></span><h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h1>
+<span id="ref"></span><h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this heading">¶</a></h1>
 <p>This section details the MOS Python API.</p>
 <section id="interface">
-<span id="ref-interface"></span><h2>Interface<a class="headerlink" href="#interface" title="Permalink to this headline">¶</a></h2>
+<span id="ref-interface"></span><h2>Interface<a class="headerlink" href="#interface" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="mos.interface.interface.Interface">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mos.interface.interface.</span></span><span class="sig-name descname"><span class="pre">Interface</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.interface.Interface" title="Permalink to this definition">¶</a></dt>
 <dd><p>MOS interface class.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>url</strong><span class="classifier">REST API url (string). If not provided, it is constructed from</span></dt><dd><p>env vars MOS_BACKEND_HOST and MOS_BACKEND_PORT</p>
 </dd>
@@ -56,7 +57,7 @@
 <span class="sig-name descname"><span class="pre">delete_model_with_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.interface.Interface.delete_model_with_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes model with a give name.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>name</strong><span class="classifier">model name (string)</span></dt><dd></dd>
 </dl>
@@ -69,12 +70,12 @@
 <span class="sig-name descname"><span class="pre">get_model_with_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.interface.Interface.get_model_with_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets a model associated with a given ID.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>id</strong><span class="classifier">model ID (integer)</span></dt><dd></dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>model</strong><span class="classifier">Model</span></dt><dd></dd>
 </dl>
@@ -87,12 +88,12 @@
 <span class="sig-name descname"><span class="pre">get_model_with_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.interface.Interface.get_model_with_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets model with a given name.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>name</strong><span class="classifier">model name (string)</span></dt><dd></dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>model</strong><span class="classifier">Model</span></dt><dd></dd>
 </dl>
@@ -105,13 +106,13 @@
 <span class="sig-name descname"><span class="pre">get_user_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">usr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pwd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.interface.Interface.get_user_token" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets user token.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>usr</strong><span class="classifier">user name (string)</span></dt><dd></dd>
 <dt><strong>owd</strong><span class="classifier">user password (string)</span></dt><dd></dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>token</strong><span class="classifier">user token (string)</span></dt><dd></dd>
 </dl>
@@ -124,13 +125,13 @@
 <span class="sig-name descname"><span class="pre">new_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quiet</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.interface.Interface.new_model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates new model from file.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>filepath</strong><span class="classifier">path to model file (string)</span></dt><dd></dd>
 <dt><strong>quiet</strong><span class="classifier">flag (boolean)</span></dt><dd></dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>model</strong><span class="classifier">Model</span></dt><dd></dd>
 </dl>
@@ -143,7 +144,7 @@
 <span class="sig-name descname"><span class="pre">set_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.interface.Interface.set_token" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets interface token.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>token</strong><span class="classifier">user token (string)</span></dt><dd></dd>
 </dl>
@@ -155,7 +156,7 @@
 
 </section>
 <section id="model">
-<span id="ref-model"></span><h2>Model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h2>
+<span id="ref-model"></span><h2>Model<a class="headerlink" href="#model" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="mos.interface.model.Model">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mos.interface.model.</span></span><span class="sig-name descname"><span class="pre">Model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">requests</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.model.Model" title="Permalink to this definition">¶</a></dt>
@@ -166,12 +167,12 @@
 <dd><p>Gets state of a constraint, all current information stored on that constraint. 
 Note currently only returns values for scalar constraints.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>name</strong><span class="classifier">variable name (string)</span></dt><dd></dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>state</strong><span class="classifier">list</span></dt><dd></dd>
 </dl>
@@ -184,12 +185,12 @@ Note currently only returns values for scalar constraints.</p>
 <span class="sig-name descname"><span class="pre">get_constraint_type_and_shape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.model.Model.get_constraint_type_and_shape" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets constraint type and shape.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>name</strong><span class="classifier">constraint name (string)</span></dt><dd></dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>type</strong><span class="classifier">string</span></dt><dd></dd>
 <dt><strong>shape</strong><span class="classifier">tuple</span></dt><dd></dd>
@@ -203,7 +204,7 @@ Note currently only returns values for scalar constraints.</p>
 <span class="sig-name descname"><span class="pre">get_description</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.model.Model.get_description" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets model description.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>description</strong><span class="classifier">model description (string)</span></dt><dd></dd>
 </dl>
@@ -216,7 +217,7 @@ Note currently only returns values for scalar constraints.</p>
 <span class="sig-name descname"><span class="pre">get_execution_log</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.model.Model.get_execution_log" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets execution log.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>log</strong><span class="classifier">string</span></dt><dd></dd>
 </dl>
@@ -230,12 +231,12 @@ Note currently only returns values for scalar constraints.</p>
 <dd><p>Gets state of a function, returning all current information on that function.  
 Note currently only returns values for functions with scalar outputs.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>name</strong><span class="classifier">function name (string)</span></dt><dd></dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>state</strong><span class="classifier">list</span></dt><dd></dd>
 </dl>
@@ -248,12 +249,12 @@ Note currently only returns values for functions with scalar outputs.</p>
 <span class="sig-name descname"><span class="pre">get_helper_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.model.Model.get_helper_object" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets value of any helper object</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>name</strong><span class="classifier">object name (string)</span></dt><dd></dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>object</strong><span class="classifier">helper object (Python object)</span></dt><dd></dd>
 </dl>
@@ -266,7 +267,7 @@ Note currently only returns values for functions with scalar outputs.</p>
 <span class="sig-name descname"><span class="pre">get_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.model.Model.get_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets model ID.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>id</strong><span class="classifier">integer</span></dt><dd></dd>
 </dl>
@@ -279,12 +280,12 @@ Note currently only returns values for functions with scalar outputs.</p>
 <span class="sig-name descname"><span class="pre">get_interface_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.model.Model.get_interface_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets interface file.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>name</strong><span class="classifier">file name (string)</span></dt><dd></dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>filepath</strong><span class="classifier">path to interface file (string)</span></dt><dd></dd>
 </dl>
@@ -297,12 +298,12 @@ Note currently only returns values for functions with scalar outputs.</p>
 <span class="sig-name descname"><span class="pre">get_interface_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.model.Model.get_interface_object" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets interface object.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>name</strong><span class="classifier">object name (string)</span></dt><dd></dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>object</strong><span class="classifier">interface object (Python object)</span></dt><dd></dd>
 </dl>
@@ -315,7 +316,7 @@ Note currently only returns values for functions with scalar outputs.</p>
 <span class="sig-name descname"><span class="pre">get_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.model.Model.get_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets model name.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>name</strong><span class="classifier">model name (string)</span></dt><dd></dd>
 </dl>
@@ -328,7 +329,7 @@ Note currently only returns values for functions with scalar outputs.</p>
 <span class="sig-name descname"><span class="pre">get_owner_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.model.Model.get_owner_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets ID of owner.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>id</strong><span class="classifier">integer</span></dt><dd></dd>
 </dl>
@@ -341,7 +342,7 @@ Note currently only returns values for functions with scalar outputs.</p>
 <span class="sig-name descname"><span class="pre">get_problem_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.model.Model.get_problem_state" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets problem state, information about problem</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>state</strong><span class="classifier">dict</span></dt><dd></dd>
 </dl>
@@ -355,7 +356,7 @@ Note currently only returns values for functions with scalar outputs.</p>
 <dd><p>Gets solver state, information about solver settings 
 and performance on problem.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>state</strong><span class="classifier">dict</span></dt><dd></dd>
 </dl>
@@ -368,7 +369,7 @@ and performance on problem.</p>
 <span class="sig-name descname"><span class="pre">get_source</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.model.Model.get_source" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets model source code.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>source</strong><span class="classifier">model source code (string)</span></dt><dd></dd>
 </dl>
@@ -381,7 +382,7 @@ and performance on problem.</p>
 <span class="sig-name descname"><span class="pre">get_status</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.model.Model.get_status" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets solution status of model</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>status</strong><span class="classifier">string</span></dt><dd></dd>
 </dl>
@@ -394,7 +395,7 @@ and performance on problem.</p>
 <span class="sig-name descname"><span class="pre">get_system</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.model.Model.get_system" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets modeling system.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>system</strong><span class="classifier">string</span></dt><dd></dd>
 </dl>
@@ -408,12 +409,12 @@ and performance on problem.</p>
 <dd><p>Gets state of a variable, all current information stored on that variable. 
 Note currently only returns values for scalar variables.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>name</strong><span class="classifier">variable name (string)</span></dt><dd></dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>state</strong><span class="classifier">list</span></dt><dd></dd>
 </dl>
@@ -426,12 +427,12 @@ Note currently only returns values for scalar variables.</p>
 <span class="sig-name descname"><span class="pre">get_variable_type_and_shape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.model.Model.get_variable_type_and_shape" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets variable type and shape.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>name</strong><span class="classifier">variable name (string)</span></dt><dd></dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>type</strong><span class="classifier">string</span></dt><dd></dd>
 <dt><strong>shape</strong><span class="classifier">tuple</span></dt><dd></dd>
@@ -445,12 +446,12 @@ Note currently only returns values for scalar variables.</p>
 <span class="sig-name descname"><span class="pre">has_constraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.model.Model.has_constraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks if model has a constraint of a certain name</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>name</strong><span class="classifier">constraint name (string)</span></dt><dd></dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>has_constraint</strong><span class="classifier">boolean</span></dt><dd></dd>
 </dl>
@@ -463,12 +464,12 @@ Note currently only returns values for scalar variables.</p>
 <span class="sig-name descname"><span class="pre">has_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.model.Model.has_function" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks if model has a function of a certain name</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>name</strong><span class="classifier">function name (string)</span></dt><dd></dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>has_function</strong><span class="classifier">boolean</span></dt><dd></dd>
 </dl>
@@ -481,12 +482,12 @@ Note currently only returns values for scalar variables.</p>
 <span class="sig-name descname"><span class="pre">has_helper_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.model.Model.has_helper_object" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks if model has a helper object of a certain name</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>name</strong><span class="classifier">helper object name (string)</span></dt><dd></dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>has_helper_object</strong><span class="classifier">boolean</span></dt><dd></dd>
 </dl>
@@ -499,12 +500,12 @@ Note currently only returns values for scalar variables.</p>
 <span class="sig-name descname"><span class="pre">has_interface_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.model.Model.has_interface_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks if model has an interface file of a certain name</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>name</strong><span class="classifier">filename (string)</span></dt><dd></dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>has_interface_file</strong><span class="classifier">boolean</span></dt><dd></dd>
 </dl>
@@ -517,12 +518,12 @@ Note currently only returns values for scalar variables.</p>
 <span class="sig-name descname"><span class="pre">has_interface_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.model.Model.has_interface_object" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks if model has an interface object of a certain name</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>name</strong><span class="classifier">object name (string)</span></dt><dd></dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>has_interface_object</strong><span class="classifier">boolean</span></dt><dd></dd>
 </dl>
@@ -535,7 +536,7 @@ Note currently only returns values for scalar variables.</p>
 <span class="sig-name descname"><span class="pre">has_problem</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.model.Model.has_problem" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks if model has a problem defined</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>has_variable</strong><span class="classifier">boolean</span></dt><dd></dd>
 </dl>
@@ -548,7 +549,7 @@ Note currently only returns values for scalar variables.</p>
 <span class="sig-name descname"><span class="pre">has_solver</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.model.Model.has_solver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks if model has a solver defined</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>has_solver</strong><span class="classifier">boolean</span></dt><dd></dd>
 </dl>
@@ -561,12 +562,12 @@ Note currently only returns values for scalar variables.</p>
 <span class="sig-name descname"><span class="pre">has_variable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.model.Model.has_variable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks if model has a variable of a certain name</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>name</strong><span class="classifier">variable name (string)</span></dt><dd></dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>has_variable</strong><span class="classifier">boolean</span></dt><dd></dd>
 </dl>
@@ -585,7 +586,7 @@ Note currently only returns values for scalar variables.</p>
 <span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">blocking</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poll_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.model.Model.run" title="Permalink to this definition">¶</a></dt>
 <dd><p>Runs model.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>blocking</strong><span class="classifier">when True, blocks other actions while model status queued or running (boolean)</span></dt><dd></dd>
 <dt><strong>poll_time</strong><span class="classifier">integer</span></dt><dd></dd>
@@ -599,7 +600,7 @@ Note currently only returns values for scalar variables.</p>
 <span class="sig-name descname"><span class="pre">set_interface_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filepath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.model.Model.set_interface_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets model interface file (assigns filepath to name)</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>name</strong><span class="classifier">interface file name (string)</span></dt><dd></dd>
 <dt><strong>filepath</strong><span class="classifier">interface file filepath (string)</span></dt><dd></dd>
@@ -613,7 +614,7 @@ Note currently only returns values for scalar variables.</p>
 <span class="sig-name descname"><span class="pre">set_interface_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.model.Model.set_interface_object" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets model interface object</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>name</strong><span class="classifier">interface object name (string)</span></dt><dd></dd>
 <dt><strong>data</strong><span class="classifier">interface object data (Python object)</span></dt><dd></dd>
@@ -689,7 +690,7 @@ Note currently only returns values for scalar variables.</p>
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
 
 
 
@@ -706,7 +707,7 @@ Note currently only returns values for scalar variables.</p>
       &copy;2021, James Merrick and Tomas Tinoco De Rubira.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.0.2</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
