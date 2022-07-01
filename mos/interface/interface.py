@@ -48,6 +48,19 @@ class Interface:
         self.url = url
         self.requests = Requests(token)
 
+    def delete_model_with_id(self, id):
+        """ 
+        Deletes model with a given id.
+
+        Parameters
+        ----------
+        id : model id (string)
+        """
+
+        url = urllib.parse.urljoin(self.url, 'model/%s/' %id)
+        r = self.requests.delete(url)
+        r.raise_for_status()
+    
     def delete_model_with_name(self, name):
         """
         Deletes model with a give name.
@@ -68,6 +81,20 @@ class Interface:
             url = urllib.parse.urljoin(self.url, 'model/%s/' %m.get_id())
             r = self.requests.delete(url)
             r.raise_for_status()
+    
+    def get_models(self):
+        """
+        Gets models.
+
+        Returns
+        -------
+        models: list of dictionaries
+        """
+
+        url = urllib.parse.urljoin(self.url, 'model/')
+        r = self.requests.get(url)
+        r.raise_for_status()
+        return r.json()
     
     def get_model_with_name(self, name):
         """
