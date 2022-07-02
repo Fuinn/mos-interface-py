@@ -311,13 +311,14 @@ class Model:
         
         return self.data['source']
 
-    def get_interface_file(self, name):
+    def get_interface_file(self, name, filepath=None):
         """
         Gets interface file.
 
         Parameters
         ----------
         name : file name (string)
+        filepath : path to write interface file (string)
 
         Returns
         -------
@@ -330,12 +331,13 @@ class Model:
         else:
             raise ValueError("Invalid file name")
 
-        filename = '%s%s' %(f['name'], f['extension'])
+        if not filepath:
+            filepath = '%s%s' %(f['name'], f['extension'])
         response = self.requests.get(f['data'], stream=True)
-        with open(filename, "wb") as handle:
+        with open(filepath, "wb") as handle:
             for data in response.iter_content():
                 handle.write(data)
-        return filename
+        return filepath
 
     def get_interface_object(self, name):
         """
