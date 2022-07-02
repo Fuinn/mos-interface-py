@@ -429,7 +429,7 @@ class Model:
 
         return c['type'], tuple(c['shape']) if c['shape'] else None
 
-    def get_variable_state(self, name, field='all'):
+    def get_variable_state(self, name, field='all', typed=True):
         """
         Gets state of a variable, all current information stored on that variable. 
         Note currently only returns values for scalar variables.
@@ -437,10 +437,13 @@ class Model:
         Parameters
         ----------
         name : variable name (string)
+        field : field name (string)
+        typed : flag (boolean)
+
 
         Returns
         -------
-        state : list
+        state : list or appropriate type
         """
         
         for v in self.__get_variables__():
@@ -463,7 +466,9 @@ class Model:
             else:
                 return s[field]
 
-        if v['type'] == 'scalar':
+        if not typed:
+            return [select(s) for s in states]
+        elif v['type'] == 'scalar':
             return select(states[0])
         elif v['type'] == 'array':
             s = np.zeros(v['shape'])
@@ -475,7 +480,7 @@ class Model:
         else:
             raise TypeError('Unknown variable type')
 
-    def get_function_state(self, name, field='all'):
+    def get_function_state(self, name, field='all', typed=True):
         """
         Gets state of a function, returning all current information on that function.  
         Note currently only returns values for functions with scalar outputs.
@@ -483,10 +488,12 @@ class Model:
         Parameters
         ----------
         name : function name (string)
+        field : field name (string)
+        typed : flag (boolean)
 
         Returns
         -------
-        state : list
+        state : list or appropriate type
         """
 
         for f in self.__get_functions__():
@@ -505,7 +512,9 @@ class Model:
             else:
                 return s[field]
 
-        if f['type'] == 'scalar':
+        if not typed:
+            return [select(s) for s in states]
+        elif f['type'] == 'scalar':
             return select(states[0])
         elif f['type'] == 'array':
             raise NotImplementedError()
@@ -514,7 +523,7 @@ class Model:
         else:
             raise TypeError('Unknown function type')
 
-    def get_constraint_state(self, name, field='all'):
+    def get_constraint_state(self, name, field='all', typed=True):
         """
         Gets state of a constraint, all current information stored on that constraint. 
         Note currently only returns values for scalar constraints.
@@ -522,10 +531,12 @@ class Model:
         Parameters
         ----------
         name : variable name (string)
+        field : field name (string)
+        typed : flag (boolean)
 
         Returns
         -------
-        state : list
+        state : list or appropriate type
         """
 
         for c in self.__get_constraints__():
@@ -544,7 +555,9 @@ class Model:
             else:
                 return s[field]
 
-        if c['type'] == 'scalar':
+        if not typed:
+            return [select(s) for s in states]
+        elif c['type'] == 'scalar':
             return select(states[0])
         elif c['type'] == 'array':
             s = np.zeros(c['shape'])
