@@ -189,18 +189,20 @@
 <dd><p>MOS model class.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mos.interface.model.Model.get_constraint_state">
-<span class="sig-name descname"><span class="pre">get_constraint_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'all'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.model.Model.get_constraint_state" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_constraint_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">typed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.model.Model.get_constraint_state" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets state of a constraint, all current information stored on that constraint. 
 Note currently only returns values for scalar constraints.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>name</strong><span class="classifier">variable name (string)</span></dt><dd></dd>
+<dt><strong>field</strong><span class="classifier">field name (string)</span></dt><dd></dd>
+<dt><strong>typed</strong><span class="classifier">flag (boolean)</span></dt><dd></dd>
 </dl>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
-<dt><strong>state</strong><span class="classifier">list</span></dt><dd></dd>
+<dt><strong>state</strong><span class="classifier">list or appropriate type</span></dt><dd></dd>
 </dl>
 </dd>
 </dl>
@@ -253,18 +255,20 @@ Note currently only returns values for scalar constraints.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mos.interface.model.Model.get_function_state">
-<span class="sig-name descname"><span class="pre">get_function_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'all'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.model.Model.get_function_state" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_function_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">typed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.model.Model.get_function_state" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets state of a function, returning all current information on that function.  
 Note currently only returns values for functions with scalar outputs.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>name</strong><span class="classifier">function name (string)</span></dt><dd></dd>
+<dt><strong>field</strong><span class="classifier">field name (string)</span></dt><dd></dd>
+<dt><strong>typed</strong><span class="classifier">flag (boolean)</span></dt><dd></dd>
 </dl>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
-<dt><strong>state</strong><span class="classifier">list</span></dt><dd></dd>
+<dt><strong>state</strong><span class="classifier">list or appropriate type</span></dt><dd></dd>
 </dl>
 </dd>
 </dl>
@@ -431,18 +435,20 @@ and performance on problem.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mos.interface.model.Model.get_variable_state">
-<span class="sig-name descname"><span class="pre">get_variable_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'all'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.model.Model.get_variable_state" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_variable_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">typed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mos.interface.model.Model.get_variable_state" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets state of a variable, all current information stored on that variable. 
 Note currently only returns values for scalar variables.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>name</strong><span class="classifier">variable name (string)</span></dt><dd></dd>
+<dt><strong>field</strong><span class="classifier">field name (string)</span></dt><dd></dd>
+<dt><strong>typed</strong><span class="classifier">flag (boolean)</span></dt><dd></dd>
 </dl>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
-<dt><strong>state</strong><span class="classifier">list</span></dt><dd></dd>
+<dt><strong>state</strong><span class="classifier">list or appropriate type</span></dt><dd></dd>
 </dl>
 </dd>
 </dl>
