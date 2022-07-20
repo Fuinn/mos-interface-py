@@ -22,7 +22,7 @@ copyright = '2021, James Merrick and Tomas Tinoco De Rubira'
 author = 'Fuinn'
 
 # The full version, including alpha/beta/rc tags
-release = '0.1.0'
+release = '0.1.1'
 
 
 # -- General configuration ---------------------------------------------------
