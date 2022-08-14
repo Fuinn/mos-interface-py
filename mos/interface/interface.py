@@ -43,7 +43,19 @@ class Interface:
             url += '/'
 
         if token is None:
-            token = os.getenv('MOS_BACKEND_TOKEN')
+            if os.getenv('MOS_BACKEND_TOKEN') is None:
+                if os.getenv('MOS_ADMIN_USR') is None:
+                    usr = ""
+                else:
+                    usr = os.getenv('MOS_ADMIN_USR')
+                if os.getenv('MOS_ADMIN_PWD') is None:
+                    pwd = ""
+                else:
+                    pwd = os.getenv('MOS_ADMIN_PWD')
+
+                token = self.get_user_token(usr,pwd)
+            else:
+                token = os.getenv('MOS_BACKEND_TOKEN')
 
         self.url = url
         self.requests = Requests(token)
