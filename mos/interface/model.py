@@ -608,6 +608,15 @@ class Model:
         else:
             return state[0]
 
+    def get_AI_model_description(self):
+        """
+        Gets a description of model structure from LLM
+
+        Returns
+        -------
+        description : model description (string)
+        """
+
     def has_interface_file(self, name):
         """
         Checks if model has an interface file of a certain name
