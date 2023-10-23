@@ -1,4 +1,4 @@
-import requests as RQST
+from .llm import llm_describe
 
 import io
 import os
@@ -621,35 +621,18 @@ class Model:
         s = io.StringIO()
         self.__write__(s)
 
-        #r = llm.post(self,s.getvalue())
 
-        content = """
-        You are a helpful assistant. Please summarize and descibe the following optimization model in a single paragraph, considering who would use the model and for what problem. Do not use bullet points.
-        %s
-        """ %s.getvalue()
+        r = llm_describe(s.getvalue())
+        output = json.loads(r.content)
 
-        
-        token = os.getenv("OPENAI_API_KEY","test")
-        headers = {
-            "Content-Type": "application/json",
-            "Authorization": "Bearer %s" %token
-        }
+        print("ChatGPT summary and description of model:")
+        print("=========================================")
+        if "choices" in output:
+            print(output["choices"][0]["message"]["content"])
+        else:
+            print(output)
+        print("=========================================")        
 
-        data = {
-            "model": "gpt-3.5-turbo",
-            "messages": [
-                {"role": "user", "content": "%s" %content}
-            ],
-            "temperature": 0.7
-        }
-
-        url = "https://api.openai.com/v1/chat/completions"
-
-        r = RQST.post(url, headers=headers, json=data)
-        
-        print("ChatGPT response:")
-        print(json.loads(r.content)["choices"][0]["message"]["content"])
-        #print(r.text)
 
     def has_interface_file(self, name):
         """
