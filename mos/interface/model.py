@@ -1,4 +1,4 @@
-from .llm import llm_describe
+from .llm import llm_describe, llm_analyse
 
 import io
 import os
@@ -633,6 +633,40 @@ class Model:
             print(output)
         print("=========================================")        
 
+
+    def get_AI_solution_analysis(self):
+        """
+        Gets an analysis of model solution from LLM
+
+        Returns
+        -------
+        description : solution analysis (string)
+        """
+        s = io.StringIO()
+        self.__write__(s)
+
+        var_dict = {}
+        for v in self.__get_variables__():
+            rv = self.requests.get(v['states'])
+            rv.raise_for_status()
+            values = []
+            for i in json.loads(rv.content):
+                values.append(i["value"])
+            var_dict[v['name']] = values
+            
+
+
+        r = llm_analyse(s.getvalue(),var_dict)
+        output = json.loads(r.content)
+
+        print("ChatGPT analysis of model:")
+        print("=========================================")
+        if "choices" in output:
+            print(output["choices"][0]["message"]["content"])
+        else:
+            print(output)
+        print("=========================================")        
+        
 
     def has_interface_file(self, name):
         """
