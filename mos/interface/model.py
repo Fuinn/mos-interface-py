@@ -610,7 +610,7 @@ class Model:
         else:
             return state[0]
 
-    def get_AI_model_description(self):
+    def get_AI_model_description(self,openai_key=None):
         """
         Gets a description of model structure from LLM
 
@@ -622,7 +622,7 @@ class Model:
         self.__write__(s)
 
 
-        r = llm_describe(s.getvalue())
+        r = llm_describe(s.getvalue(),openai_key)
         output = json.loads(r.content)
 
         print("ChatGPT summary and description of model:")
@@ -634,7 +634,7 @@ class Model:
         print("=========================================")        
 
 
-    def get_AI_solution_analysis(self):
+    def get_AI_solution_analysis(self,openai_key=None):
         """
         Gets an analysis of model solution from LLM
 
@@ -656,7 +656,7 @@ class Model:
             
 
 
-        r = llm_analyse(s.getvalue(),var_dict)
+        r = llm_analyse(s.getvalue(),var_dict,openai_key)
         output = json.loads(r.content)
 
         print("ChatGPT analysis of model:")
